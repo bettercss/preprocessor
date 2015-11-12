@@ -112,21 +112,21 @@ Plugin: [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 #### CLI
 
 ```
-  Usage: bettercss [<input>] [<output>]
+Usage: bettercss [<input>] [<output>]
 
-  Options:
+Options:
 
-    -h, --help       output usage information
-    -V, --version    output the version number
-    -s, --sourcemap  enable source maps
+-h, --help       output usage information
+-V, --version    output the version number
+-s, --sourcemap  enable source maps
 
-  Examples:
+Examples:
 
-    # Pass an input and output file:
-    $ bettercss input.css output.css
+# Pass an input and output file:
+$ bettercss input.css output.css
 
-    # Enable source maps:
-    $ bettercss input.css output.css --sourcemap
+# Enable source maps:
+$ bettercss input.css output.css --sourcemap
 ```
 
 #### Node.js
