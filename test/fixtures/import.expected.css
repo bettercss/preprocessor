@@ -1,0 +1,4 @@
+/* @TODO Should be a relative path but mocha gives __dirname */
+.test-example {
+	color: red;
+}

@@ -1,0 +1,55 @@
+{
+  "name": "bettercss-preprocessor",
+  "version": "0.0.2",
+  "description": "A modular processor for bettercss",
+  "main": "index.js",
+  "keywords": [
+    "bettercss",
+    "postcss",
+    "css",
+    "preprocessor"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bettercss/preprocessor.git"
+  },
+  "author": "Mike Bailey <mike@bettercss.io>",
+  "maintainers": [
+    {
+      "name": "Mike Bailey",
+      "email": "mike@bettercss.io"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/bettercss/preprocessor/issues"
+  },
+  "bin": {
+    "bettercss": "./bin/bettercss.js"
+  },
+  "engines": {
+    "node": ">= 0.12.0"
+  },
+  "homepage": "https://github.com/bettercss/preprocessor",
+  "dependencies": {
+    "autoprefixer": "^6.1.0",
+    "commander": "^2.9.0",
+    "postcss": "^5.0.11",
+    "postcss-calc": "^5.0.0",
+    "postcss-css-variables": "^0.5.1",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-import": "^7.1.3",
+    "pretty-error": "^1.2.0",
+    "read-file-stdin": "^0.2.0",
+    "write-file-stdout": "0.0.2"
+  },
+  "devDependencies": {
+    "bluebird": "^3.0.5",
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "gulp-mocha": "^2.1.3"
+  },
+  "scripts": {
+    "test": "gulp test"
+  }
+}

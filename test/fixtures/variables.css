@@ -1,0 +1,7 @@
+:root {
+	--test: 20px;
+}
+
+.test {
+	padding: var(--test);
+}

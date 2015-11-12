@@ -1,0 +1,2 @@
+/* @TODO Should be a relative path but mocha gives __dirname */
+@import './test/fixtures/import-example.css';
