@@ -8,6 +8,7 @@ var write = require('write-file-stdout');
 var read = require('read-file-stdin');
 var bettercss = require('../');
 var PrettyError = require('pretty-error');
+var objectAssign = require('object-assign');
 
 var options;
 var input;
@@ -36,7 +37,7 @@ input = program.args[0] ? resolve(program.args[0]) : null;
 output = program.args[1] ? resolve(program.args[1]) : null;
 
 // Options
-options = Object.assign({}, {
+options = objectAssign({}, {
 	sourcemap: (program.sourcemap ? true : false)
 });
 

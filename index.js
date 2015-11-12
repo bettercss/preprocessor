@@ -1,6 +1,7 @@
 'use strict';
 
 var postcss = require('postcss');
+var objectAssign = require('object-assign');
 
 var processors;
 var defaults;
@@ -26,7 +27,7 @@ defaults = {
 bettercss = postcss.plugin('bettercss', function(options) {
 	var plugins;
 
-	options = Object.assign({}, defaults, options) || defaults;
+	options = objectAssign({}, defaults, options) || defaults;
 
 	plugins = Object.keys(processors)
 	.filter(function(key) {
