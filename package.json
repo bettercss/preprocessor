@@ -1,6 +1,6 @@
 {
   "name": "bettercss-preprocessor",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A modular processor for bettercss",
   "main": "index.js",
   "keywords": [
