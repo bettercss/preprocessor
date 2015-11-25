@@ -51,6 +51,11 @@ run(input, output, options);
 function run(input, output, options) {
 	options = options || {};
 
+	// Fix for relative import paths
+	options = objectAssign({}, options, {
+		from: input
+	});
+
 	read(input, function(error, buffer) {
 
 		if (error) {

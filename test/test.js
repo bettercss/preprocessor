@@ -7,6 +7,7 @@ var path = require('path');
 var spawn = require('child_process').spawn;
 var Promise = require('bluebird');
 var bettercss = require('../');
+var objectAssign = require('object-assign');
 
 var test;
 var cli;
@@ -22,9 +23,11 @@ describe('bettercss', function () {
 		return test('variables', {});
 	});
 
-	// @TODO Find out why import paths are not relative
 	it('import', function() {
-		return test('import', {});
+		return test('import', {
+			// Fix for relative paths
+			from: path.join(__dirname, './fixtures/import.css')
+		});
 	});
 
 	it('calc', function() {
@@ -42,15 +45,15 @@ describe('bettercss', function () {
 });
 
 test = function(fixture, options) {
-	var input = fixture + '.css';
-	var expected = fixture + '.expected.css';
+	var input = path.join(__dirname, 'fixtures', fixture + '.css');
+	var expected = path.join(__dirname, 'fixtures', fixture + '.expected.css');
 
-	input = fs.readFileSync(path.join(__dirname, 'fixtures', input), 'utf8');
-	expected = fs.readFileSync(path.join(__dirname, 'fixtures', expected), 'utf8');
+	input = fs.readFileSync(input, 'utf8');
+	expected = fs.readFileSync(expected, 'utf8');
 
 	// Return promise
-	return postcss([ bettercss(options) ])
-	.process(input)
+	return postcss([ bettercss() ])
+	.process(input, options)
 	.then(function (result) {
 		expect(result.css).to.eql(expected);
 		expect(result.warnings()).to.be.empty;
