@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bettercss/preprocessor.svg)](https://travis-ci.org/bettercss/preprocessor)
 
-CSS preprocessor for BetterCSS built with [PostCSS](https://github.com/postcss/postcss).
+CSS preprocessor for Bettercss built with [PostCSS](https://github.com/postcss/postcss).
 
 ## Installation
 
